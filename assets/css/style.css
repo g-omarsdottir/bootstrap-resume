@@ -22,6 +22,14 @@
     background-color: #fff;
 }
 
+.bg-color-conferences {
+    background-color: #f4f4f4;
+}
+
+.bg-color-groups {
+    background-color: #ffffff;
+}
+
 .ui-menu-color-home {
     background-color: #e67e22;
 }
@@ -35,7 +43,22 @@
 }
 
 .ui-menu-color-download {
+    background-color: #d9a81d;
+}
+
+.ui-menu-color-github {
+    background-color: #1c4a6c;
+}
+
+.ui-menu-color-interests {
+    background-color: #e74c3c;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
     background-color: #525252;
+    color: #555555;
 }
 
 /*--------------------------------------------Special paddings/margins/text */
@@ -181,7 +204,7 @@ footer {
     margin: 0;
 }
 
-.cv-pdf i {
+footer .cv-pdf i {
     font-size: 18px;
     color: #fafafa;
     text-align: center;
@@ -192,7 +215,7 @@ footer {
     -o-transition: all 0.35s ease-in-out;
 }
 
-.cv-pdf i:hover {
+footer .cv-pdf i:hover {
     color: #e84610;
 }
 
@@ -203,7 +226,7 @@ footer {
 .social-links li a i {
     width: 32px;
     height: 32px;
-    padding: 12px;
+    padding: 12px 0;
     border-radius: 50%;
     font-size: 13px;
     line-height: 7px;
@@ -221,7 +244,7 @@ footer {
 }
 
 #footer-details {
-    padding: 20px;
+    margin: 20px;
 }
 
 /*--------------------------------------------Three reasons */
@@ -255,6 +278,7 @@ footer {
 }
 
 .personal-info-item .key {
+    display: inline-block;
     width: 30%;
     margin-right: 21px;
     padding-top: 2px;
@@ -266,6 +290,7 @@ footer {
 }
 
 .personal-info-item .value {
+    display: inline-block;
     position: relative;
     width: 60%;
 }
@@ -293,10 +318,10 @@ footer {
 
 /*--------------------------------------------Work History */
 
-.history-heading {
+/*.history-heading {
     color: #fafafa;
     margin-bottom: 50px;
-}
+} */
 
 .timeline-item {
     padding: 4em 2em 0em 2em;
@@ -309,8 +334,18 @@ footer {
     padding: 0;
     margin: 0;
 }
+/*
+
+Distinguishing Pseudo-Elements from Pseudo-Classes
+•	Pseudo-classes (like :hover, :focus) represent dynamic states of an element. They use a single colon.
+•	Pseudo-elements (like ::before, ::after) allow you to style fictional elements that aren't explicitly part of the HTML structure. They use double colons.
+
 
 .timeline-item:before {
+*/
+
+
+.timeline-item::before {
     content: attr(data-dates);
     position: absolute;
     left: 2.5em;
@@ -324,7 +359,8 @@ footer {
 }
 
 /* The nodes on the timeline */
-.timeline-item:after {
+
+.timeline-item::after {
     width: 12px;
     height: 12px;
     display: block;
@@ -360,6 +396,12 @@ button[type="submit"] {
     margin-bottom: 20px;
     color: #fafafa;
     background-color: #e84610;
+}
+
+/*--------------------------------------------Map*/
+
+div#map {
+    min-height: 360px;
 }
 
 /*--------------------------------------------Media Queries */
