@@ -18,11 +18,13 @@
                 publicKey: "7ApaJ1BiV4_mywUZr",
             });
         })();
+/*
         var templateParams = {
-            name: 'James',
+            "from_name": contactForm.name.value,
+            "from_email": contactForm.emailaddress.value,
+            "project_request": contactForm.projectsummary.value,
             notes: 'Check this out!',
         };
-
         emailjs.send('default_service', 'contact-form-test', templateParams).then(
             (response) => {
                 console.log('SUCCESS!', response.status, response.text);
@@ -31,6 +33,7 @@
                 console.log('FAILED...', error);
             },
         );
+*/
     </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Rosie</title>
@@ -88,7 +91,7 @@
                 <h5 class="uppercase text-center">Let's work together!</h5>
 
                 <div class="center-form">
-                    <form>
+                    <form onsubmit="return sendMail(this);">
                         <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
                         <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email"
                             required />
@@ -168,6 +171,7 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
